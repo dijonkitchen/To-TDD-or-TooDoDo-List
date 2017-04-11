@@ -10,7 +10,11 @@ This repository is meant as an exercise in a few different types
 of "driven-development":
 *   [Readme-Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
 *   [Test-Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)
-*   [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development)
+  *   [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development)
+      * Regression tests  
+          * Unit tests
+          * Integration tests
+          * Functional/System/Acceptance tests
 
 Ideally, I'll have committed changes into git in a reasonable order
 given the above so it'll be easy to reference. (If you examine this,

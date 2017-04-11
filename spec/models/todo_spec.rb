@@ -8,6 +8,6 @@ RSpec.describe Todo, type: :model do
 
   it 'todo item has a description' do
     item = Todo.new(description: "Hello first todo item!")
-    expect(item.description).to be("Hello first todo item!")
+    expect(item.description).to eq("Hello first todo item!")
   end
 end

@@ -5,4 +5,9 @@ RSpec.describe Todo, type: :model do
     item = Todo.new
     expect(item).to be_an_instance_of(Todo)
   end
+
+  it 'todo item has a description' do
+    item = Todo.new(description: "Hello first todo item!")
+    expect(item.description).to be("Hello first todo item!")
+  end
 end

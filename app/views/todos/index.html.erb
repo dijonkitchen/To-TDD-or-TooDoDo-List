@@ -2,8 +2,17 @@
   <h1>
     todos
   </h1>
-  <input name="new-todo" class="new-todo">
-  <input value="add" type="submit">
+  <%= form_tag('/todos') do %>
+    <%= text_field_tag(:'new-todo') %>
+    <%= submit_tag('add') %>
+  <% end %>
 </header>
-Buy milk
-Buy cereal
+<section>
+  <ul>
+    <% @todos.each do |todo| %>
+      <li>
+        <%= todo.description %>
+      </li>
+    <% end %>
+  </ul>
+</section>

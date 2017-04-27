@@ -6,4 +6,10 @@ RSpec.feature "Loading Website", type: :feature do
 
     expect(page).to have_css("header h1", text: "todos")
   end
+
+  it "displays page title when going to root page" do
+    visit "/"
+
+    expect(page).to have_css("header h1", text: "todos")
+  end
 end

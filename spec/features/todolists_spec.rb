@@ -14,4 +14,12 @@ RSpec.feature "Todo List", type: :feature do
     click_button('add')
     expect(page).to have_text('Buy cereal')
   end
+
+  it "enters and displays a new todo item" do
+    visit '/'
+    random_num = rand(26)
+    page.fill_in 'new-todo', with: random_num
+    click_button('add')
+    expect(page).to have_text(random_num)
+  end
 end

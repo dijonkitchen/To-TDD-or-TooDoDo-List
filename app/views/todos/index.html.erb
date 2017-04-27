@@ -1,0 +1,18 @@
+<header>
+  <h1>
+    todos
+  </h1>
+  <%= form_tag('/todos') do %>
+    <%= text_field_tag(:'new-todo') %>
+    <%= submit_tag('add') %>
+  <% end %>
+</header>
+<section>
+  <ul>
+    <% @todos.each do |todo| %>
+      <li>
+        <%= todo.description %>
+      </li>
+    <% end %>
+  </ul>
+</section>

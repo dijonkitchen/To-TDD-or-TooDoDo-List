@@ -5,7 +5,7 @@ RSpec.feature "UpdateTodoItems", type: :feature do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy milk'
     click_button('add')
-    click_button('complete')
+    check('complete')
     expect(page).to have_css('completed', text: 'Buy milk')
   end
 end

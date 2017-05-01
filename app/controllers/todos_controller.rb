@@ -21,6 +21,15 @@ class TodosController < ApplicationController
     end
   end
 
+  def destroy
+    @todo = Todo.find_by(id: params[:id])
+    if @todo.destroy
+      redirect_to '/'
+    else
+      render @todo.errors.full_messages
+    end
+  end
+
   private
 
   def todo_params

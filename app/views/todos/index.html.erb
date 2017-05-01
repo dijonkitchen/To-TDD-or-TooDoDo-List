@@ -17,6 +17,7 @@
             <%= f.label(todo.description) %>
             <%= f.submit %>
           <% end %>
+          <%= button_to "Destroy", todo, method: :delete %>
         </li>
       </div>
     <% end %>

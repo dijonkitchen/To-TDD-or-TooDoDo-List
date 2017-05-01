@@ -10,9 +10,15 @@
 <section>
   <ul>
     <% @todos.each do |todo| %>
-      <li>
-        <%= todo.description %>
-      </li>
+      <div>
+        <li>
+          <%= form_for(todo) do |f| %>
+            <%= f.check_box(:completed, { class: "completed" }, todo.id) %>
+            <%= f.label(todo.description) %>
+            <%= f.submit %>
+          <% end %>
+        </li>
+      </div>
     <% end %>
   </ul>
 </section>

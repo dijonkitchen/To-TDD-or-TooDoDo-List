@@ -5,7 +5,21 @@ RSpec.feature "UpdateTodoItems", type: :feature do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy milk'
     click_button('add')
-    check('complete')
-    expect(page).to have_css('completed', text: 'Buy milk')
+    checkbox = find(:css, "#todo_completed[value='#{Todo.last.id}']")
+    checkbox.click
+    click_button('Update Todo')
+    expect(checkbox.checked?).to eq(true)
+  end
+
+  it "undo completing a todo item" do
+    visit '/'
+    page.fill_in 'new-todo', with: 'Buy milk'
+    click_button('add')
+    checkbox = find(:css, "#todo_completed[value='#{Todo.last.id}']")
+    checkbox.click
+    click_button('Update Todo')
+    checkbox.click
+    click_button('Update Todo')
+    expect(checkbox.checked?).to eq(false)
   end
 end

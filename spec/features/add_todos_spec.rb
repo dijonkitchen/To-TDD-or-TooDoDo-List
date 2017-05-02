@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Todo List", type: :feature do
-  it "enters and displays a new todo item" do
+  it "can enter and display a new todo item" do
     visit '/'
     random_num = rand(26)
     page.fill_in 'new-todo', with: random_num

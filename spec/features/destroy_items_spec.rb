@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "DestroyItems", type: :feature do
+RSpec.feature "Destroy Items", type: :feature do
   it 'destroys a Todo item when clicked' do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy milk'

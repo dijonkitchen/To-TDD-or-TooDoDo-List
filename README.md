@@ -16,7 +16,7 @@ of "driven-development":
       * Regression tests  
           * Unit tests
           * Integration tests
-          * Feature/Functional/System/Acceptance tests
+          * Feature/System/Functional/Acceptance tests
 
 Ideally, I'll have committed changes into git in a reasonable order
 given the above so it'll be easy to reference. (If you examine this,

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dijonkitchen/To-TDD-or-TooDoDo-List.svg?branch=master)](https://travis-ci.org/dijonkitchen/To-TDD-or-TooDoDo-List)
+
 # README
 
 ## What
@@ -14,7 +16,7 @@ of "driven-development":
       * Regression tests  
           * Unit tests
           * Integration tests
-          * Feature/Functional/System/Acceptance tests
+          * Feature/System/Functional/Acceptance tests
 
 Ideally, I'll have committed changes into git in a reasonable order
 given the above so it'll be easy to reference. (If you examine this,
@@ -65,6 +67,9 @@ gem install bundler
 bundle install
 bundle exec rails server
 ```
+
+In the future, this will be deployed on the [Google Cloud Platform](https://cloud.google.com/) via
+[Pivotal Cloud Foundry](https://pivotal.io/platform) to test them out as well.
 
 ## Who
 

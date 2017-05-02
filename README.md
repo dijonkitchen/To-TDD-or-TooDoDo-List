@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dijonkitchen/To-TDD-or-TooDoDo-List.svg?branch=master)](https://travis-ci.org/dijonkitchen/To-TDD-or-TooDoDo-List)
+
 # README
 
 ## What

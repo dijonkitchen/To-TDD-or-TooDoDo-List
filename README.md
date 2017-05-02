@@ -68,6 +68,9 @@ bundle install
 bundle exec rails server
 ```
 
+In the future, this will be deployed on the [Google Cloud Platform](https://cloud.google.com/) via
+[Pivotal Cloud Foundry](https://pivotal.io/platform) to test them out as well.
+
 ## Who
 
 [Me](https://www.linkedin.com/in/jonathanschen/)

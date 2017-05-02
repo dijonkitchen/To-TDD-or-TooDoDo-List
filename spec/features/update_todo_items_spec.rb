@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "UpdateTodoItems", type: :feature do
-  it "complete a todo item" do
+RSpec.feature "Update Todo Items", type: :feature do
+  it "checks a todo item to complete it" do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy milk'
     click_button('add')
@@ -11,7 +11,7 @@ RSpec.feature "UpdateTodoItems", type: :feature do
     expect(checkbox.checked?).to eq(true)
   end
 
-  it "undo completing a todo item" do
+  it "unchecking a todo item sets it as not completed" do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy milk'
     click_button('add')

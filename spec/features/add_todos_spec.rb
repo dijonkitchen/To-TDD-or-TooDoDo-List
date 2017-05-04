@@ -6,7 +6,7 @@ RSpec.feature "Todo List", type: :feature do
     random_num = rand(26)
     page.fill_in 'new-todo', with: random_num
     click_button('add')
-    expect(page).to have_text(random_num)
+    expect(page).to have_selector("input[value='#{random_num}']")
   end
 
   it 'shows latest todo item last' do

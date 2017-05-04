@@ -5,6 +5,7 @@ class TodosController < ApplicationController
     else
       @todos = Todo.all.order(:created_at)
     end
+    @count = Todo.where(completed: false).count
   end
 
   def create

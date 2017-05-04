@@ -5,7 +5,7 @@ RSpec.feature "Destroy Items", type: :feature do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy milk'
     click_button('add')
-    click_button('Destroy')
+    click_link('Destroy')
     expect(page).to_not have_text('Buy milk')
   end
 end

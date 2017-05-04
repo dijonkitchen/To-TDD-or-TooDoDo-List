@@ -16,8 +16,8 @@
             <%= f.check_box(:completed, { class: "completed" }, todo.id) %>
             <%= f.text_field(:description) %>
             <%= f.submit %>
+            <%= link_to "Destroy", todo_path(todo), method: :delete %>
           <% end %>
-          <%= button_to "Destroy", todo, method: :delete %>
         </li>
       </div>
     <% end %>

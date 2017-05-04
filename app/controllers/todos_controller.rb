@@ -1,6 +1,10 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.all.order(:created_at)
+    if params[:completed]
+      @todos = Todo.where(completed: params[:completed]).order(:created_at)
+    else
+      @todos = Todo.all.order(:created_at)
+    end
   end
 
   def create

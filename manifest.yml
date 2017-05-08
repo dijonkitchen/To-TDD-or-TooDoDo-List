@@ -1,0 +1,6 @@
+---
+applications:
+- name: To-TDD-or-TooDoDo-List
+  services:
+    - elephantsql
+  command: bundle exec rake db:migrate && bundle exec rails server -p $PORT -e $RAILS_ENV

@@ -68,8 +68,10 @@ bundle install
 bundle exec rails server
 ```
 
-In the future, this will be deployed on the [Google Cloud Platform](https://cloud.google.com/) via
-[Pivotal Cloud Foundry](https://pivotal.io/platform) to test them out as well.
+This is deployed on [Pivotal Web Services](https://run.pivotal.io/) via the
+[Pivotal Cloud Foundry](https://pivotal.io/platform) platform to test it out.
+
+You can view the app here: [http://to-tdd-or-toododo-list.cfapps.io/](http://to-tdd-or-toododo-list.cfapps.io/)
 
 ## Who
 

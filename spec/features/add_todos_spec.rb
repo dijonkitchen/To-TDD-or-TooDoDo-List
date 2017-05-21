@@ -9,6 +9,12 @@ RSpec.feature "Todo List", type: :feature do
     expect(page).to have_selector("input[value='#{random_num}']")
   end
 
+  it 'shows error message if description is blank' do
+    visit '/'
+    click_button('add')
+    expect(page).to have_text("Description can't be blank")
+  end
+
   it 'shows latest todo item last' do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy bowls'

@@ -10,29 +10,20 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(description: params[:'new-todo'])
-    if @todo.save
-      redirect_to_home
-    else
-      render @todo.errors.full_messages
-    end
+    flash[:errors] = @todo.errors.full_messages unless @todo.save
+    redirect_to_home
   end
 
   def update
     @todo = Todo.find_by(id: params[:id])
-    if @todo.update(todo_params)
-      redirect_to_home
-    else
-      render @todo.errors.full_messages
-    end
+    flash[:errors] = @todo.errors.full_messages unless @todo.update(todo_params)
+    redirect_to_home
   end
 
   def destroy
     @todo = Todo.find_by(id: params[:id])
-    if @todo.destroy
-      redirect_to_home
-    else
-      render @todo.errors.full_messages
-    end
+    flash[:errors] = @todo.errors.full_messages unless @todo.destroy
+    redirect_to_home
   end
 
   private

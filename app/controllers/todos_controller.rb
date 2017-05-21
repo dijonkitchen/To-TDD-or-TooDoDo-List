@@ -21,7 +21,7 @@ class TodosController < ApplicationController
   end
 
   def destroy
-    if params[:id] = 'completed'
+    if params[:id] == 'completed'
       Todo.where(completed: true).destroy_all
     else
       @todo = Todo.find_by(id: params[:id])

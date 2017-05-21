@@ -97,7 +97,9 @@ are a lot. I learned that they should be used to test edge cases, but just for
 making sure things are working as intended (just the happy paths).
 
 While updating some gems or ruby versions, these regression tests were
-useful to see if functionality was still intact.
+useful to see if functionality was still intact. Additionally, with
+continuous integration services like Travis CI, it runs all the tests on
+each pull request, so you can tell if new code is breaking anything. 
 
 Overall, this was a great experience. I'll continue to use similar
 methods, but perhaps on more ambitious projects to really see the power

@@ -45,4 +45,6 @@
       <a href="/?completed=true">Completed</a>
     </li>
   </ul>
+  <%= button_to 'Clear completed', { action: 'destroy', id: 'completed' },
+                                           method: :delete %>
 </footer>

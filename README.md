@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/dijonkitchen/To-TDD-or-TooDoDo-List/badges/gpa.svg)](https://codeclimate.com/github/dijonkitchen/To-TDD-or-TooDoDo-List)
+
+[![Test Coverage](https://codeclimate.com/github/dijonkitchen/To-TDD-or-TooDoDo-List/badges/coverage.svg)](https://codeclimate.com/github/dijonkitchen/To-TDD-or-TooDoDo-List/coverage)
+
 [![Build Status](https://travis-ci.org/dijonkitchen/To-TDD-or-TooDoDo-List.svg?branch=master)](https://travis-ci.org/dijonkitchen/To-TDD-or-TooDoDo-List)
 
 # README
@@ -99,7 +103,7 @@ making sure things are working as intended (just the happy paths).
 While updating some gems or ruby versions, these regression tests were
 useful to see if functionality was still intact. Additionally, with
 continuous integration services like Travis CI, it runs all the tests on
-each pull request, so you can tell if new code is breaking anything. 
+each pull request, so you can tell if new code is breaking anything.
 
 Overall, this was a great experience. I'll continue to use similar
 methods, but perhaps on more ambitious projects to really see the power

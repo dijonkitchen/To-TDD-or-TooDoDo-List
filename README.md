@@ -4,7 +4,7 @@
 
 ## What
 
-A simple (hopefully!) webapp based on [ToDoMVC](https://github.com/tastejs/todomvc) with tests!
+A simple, persistent webapp based on [ToDoMVC](https://github.com/tastejs/todomvc) with tests!
 
 ## Why
 

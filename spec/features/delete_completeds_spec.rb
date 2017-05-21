@@ -9,6 +9,6 @@ RSpec.feature "DeleteCompleteds", type: :feature do
     checkbox.click
     click_button('Update Todo')
     click_button('Clear completed')
-    expect(page).to not_have_selector("input[value='Move to California']")
+    expect(page).to_not have_selector("input[value='Move to California']")
   end
 end

@@ -1,7 +1,14 @@
 <header>
+  <% flash.each do |name, messages| %>
+    <% messages.each do |message| %>
+      <%= content_tag :div, message, class: name %>
+    <% end %>
+  <% end %>
+
   <h1>
     todos
   </h1>
+
   <%= form_tag('/todos') do %>
     <%= text_field_tag(:'new-todo') %>
     <%= submit_tag('add') %>

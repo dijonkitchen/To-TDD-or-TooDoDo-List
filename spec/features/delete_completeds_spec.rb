@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "DeleteCompleteds", type: :feature do
+RSpec.feature 'DeleteCompleteds', type: :feature do
   it 'deletes all completed todos when clicked' do
     visit '/'
     page.fill_in 'new-todo', with: 'Move to California'

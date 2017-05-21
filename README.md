@@ -4,7 +4,7 @@
 
 ## What
 
-A simple (hopefully!) webapp based on [ToDoMVC](https://github.com/tastejs/todomvc) with tests!
+A simple, persistent webapp based on [ToDoMVC](https://github.com/tastejs/todomvc) with tests!
 
 ## Why
 
@@ -27,7 +27,7 @@ already!)
 
 My hypothesis is that RDD/TDD/BDD are good practices for
 long-term projects on larger teams that can benefit from good tests.
-Specifically, staring with behavioral tests from a human perspective with things like unit tests on models and integration tests for functionality
+Specifically, starting with behavioral tests from a human perspective with things like unit tests on models and integration tests for functionality
 allow for simpler, better designed software that can adapt to changes
 more easily.
 
@@ -72,6 +72,38 @@ This is deployed on [Pivotal Web Services](https://run.pivotal.io/) via the
 [Pivotal Cloud Foundry](https://pivotal.io/platform) platform to test it out.
 
 You can view the app here: [http://to-tdd-or-toododo-list.cfapps.io/](http://to-tdd-or-toododo-list.cfapps.io/)
+
+## Where
+
+The experimented worked pretty well. The Readme was maybe more
+extensive than it needed to be, but that was fun!
+
+TDD/BDD was useful to discover some edge cases and only build as
+much as was needed. It kept functionality to a minimum viable
+product.
+
+Unit test were simple, but since this was a simple app with very
+little functionality, there weren't many. In the future, it'd be
+good to add "sad" and "bad" cases instead of just the "happy"
+path.
+
+There were minimal integration tests also because of minimal
+functionality and because I used feature tests to test the
+integration of the system.
+
+For feature tests, there quite a bit, but cleaned it up a little
+based on feedback from peers that it may make the test suite slow when there
+are a lot. I learned that they should be used to test edge cases, but just for
+making sure things are working as intended (just the happy paths).
+
+While updating some gems or ruby versions, these regression tests were
+useful to see if functionality was still intact.
+
+Overall, this was a great experience. I'll continue to use similar
+methods, but perhaps on more ambitious projects to really see the power
+of tests in production.
+
+Going forward, I can still add some tests and style it nicely!
 
 ## Who
 

@@ -4,3 +4,9 @@ script:
   - bundle exec rake db:create db:schema:load db:test:prepare
   - bundle exec rspec
 cache: bundler
+addons:
+  code_climate:
+    repo_token: 821968c1f2584ecd7f580ed8b75ff37cb669a13803759e86195f5a1791427523
+# regular test configuration
+after_success:
+  - bundle exec codeclimate-test-reporter

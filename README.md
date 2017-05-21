@@ -87,9 +87,8 @@ much as was needed. It kept functionality to a minimum viable
 product.
 
 Unit test were simple, but since this was a simple app with very
-little functionality, there weren't many. In the future, it'd be
-good to add "sad" and "bad" cases instead of just the "happy"
-path.
+little functionality, there weren't many "sad" or "bad" cases compared
+"happy" cases.
 
 There were minimal integration tests also because of minimal
 functionality and because I used feature tests to test the

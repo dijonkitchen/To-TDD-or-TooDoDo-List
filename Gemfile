@@ -44,7 +44,10 @@ group :development, :test do
   gem 'chromedriver-helper'
 end
 
-gem 'simplecov', :require => false, :group => :test
+group :test do
+  gem 'simplecov', :require => false
+  gem "codeclimate-test-reporter", "~> 1.0.0"
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

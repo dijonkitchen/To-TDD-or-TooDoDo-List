@@ -11,6 +11,11 @@ RSpec.describe Todo, type: :model do
     expect(item.description).to eq("Hello first todo item!")
   end
 
+  it "doesn't add items with an empty description" do
+    item = Todo.new(description: '')
+    expect(item.save).to eq(false)
+  end
+
   it 'defaults to not completed' do
     item = Todo.new(description: "Should not be completed yet!")
     expect(item.completed?).to eq(false)

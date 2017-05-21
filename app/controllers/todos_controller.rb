@@ -21,8 +21,12 @@ class TodosController < ApplicationController
   end
 
   def destroy
-    @todo = Todo.find_by(id: params[:id])
-    flash_full_errors unless @todo.destroy
+    if params[:id] = 'completed'
+      Todo.where(completed: true).destroy_all
+    else
+      @todo = Todo.find_by(id: params[:id])
+      flash_full_errors unless @todo.destroy
+    end
     redirect_to_home
   end
 

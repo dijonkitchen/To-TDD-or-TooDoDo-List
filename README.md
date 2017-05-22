@@ -99,8 +99,8 @@ based on feedback from peers that it may make the test suite slow when there
 are a lot. I learned that they shouldn't be used to test edge cases, but just for
 making sure things are working as intended (just the happy paths).
 
-While updating some gems or ruby versions, these regression tests were
-useful to see if functionality was still intact. Additionally, with
+While updating some gems or ruby versions, these tests were
+useful to see if there was a regression in functionality. Additionally, with
 continuous integration services like Travis CI, it runs all the tests on
 each pull request, so you can tell if new code is breaking anything.
 

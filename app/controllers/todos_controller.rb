@@ -11,13 +11,13 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(description: params[:'new-todo'])
     flash_full_errors unless @todo.save
-    redirect_to_home
+    redirect_back fallback_location: root_path
   end
 
   def update
     @todo = Todo.find_by(id: params[:id])
     flash_full_errors unless @todo.update(todo_params)
-    redirect_to_home
+    redirect_back fallback_location: root_path
   end
 
   def destroy
@@ -27,17 +27,13 @@ class TodosController < ApplicationController
       @todo = Todo.find_by(id: params[:id])
       flash_full_errors unless @todo.destroy
     end
-    redirect_to_home
+    redirect_back fallback_location: root_path
   end
 
   private
 
   def todo_params
     params.require(:todo).permit(:completed, :description)
-  end
-
-  def redirect_to_home
-    redirect_to root_path
   end
 
   def flash_full_errors

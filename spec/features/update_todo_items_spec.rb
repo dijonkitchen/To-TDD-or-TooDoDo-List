@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Update Todo Items", type: :feature do
-  it "can enter and edit a todo item" do
+RSpec.feature 'Update Todo Items', type: :feature do
+  it 'can enter and edit a todo item' do
     visit '/'
     page.fill_in 'new-todo', with: 'Learn TDD'
     click_button('add')
@@ -14,7 +14,7 @@ RSpec.feature "Update Todo Items", type: :feature do
     expect(page).to have_selector("input[value='#{new_text}']")
   end
 
-  it "unchecking a todo item sets it as not completed" do
+  it 'unchecking a todo item sets it as not completed' do
     visit '/'
     page.fill_in 'new-todo', with: 'Buy milk'
     click_button('add')

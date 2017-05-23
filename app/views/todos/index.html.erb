@@ -1,4 +1,4 @@
-<header>
+<header id='header'>
   <% flash.each do |name, messages| %>
     <% messages.each do |message| %>
       <%= content_tag :div, message, class: name %>

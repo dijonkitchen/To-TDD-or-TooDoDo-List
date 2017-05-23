@@ -1,4 +1,4 @@
-<header>
+<header id='header'>
   <% flash.each do |name, messages| %>
     <% messages.each do |message| %>
       <%= content_tag :div, message, class: name %>
@@ -10,7 +10,8 @@
   </h1>
 
   <%= form_tag('/todos') do %>
-    <%= text_field_tag(:'new-todo') %>
+    <%= text_field_tag(:'new-todo', nil,
+            placeholder: 'What needs to be done?', autofocus: true) %>
     <%= submit_tag('add') %>
   <% end %>
 </header>
